@@ -20,6 +20,8 @@ const lastName = "Smith";
 
 export const createFullName = () => {
   // Write your code here
+  const fullName = firstName + " " + lastName;
+  return fullName;
 };
 
 /**
@@ -33,6 +35,11 @@ const largeNumber2 = 200;
 
 export const findLargestNumber = () => {
   // Write your code here
+  if (largeNumber1 > largeNumber2) {
+    return largeNumber1;
+  } else if (largeNumber2 > largeNumber1) {
+    return largeNumber2;
+  }
 };
 
 /**
@@ -46,6 +53,8 @@ const addNumber2 = 24;
 
 export const addNumbers = () => {
   // Write your code here
+  const addNumbers = addNumber1 + addNumber2;
+  return addNumbers;
 };
 
 /* Intermediate Challenges */
@@ -60,6 +69,8 @@ const password = "thisIsMyVeryLongPassword123456789";
 
 export const findLengthOfPassword = () => {
   // Write your code here
+  const findLengthOfPassword = password.length;
+  return findLengthOfPassword;
 };
 
 /**
@@ -76,6 +87,16 @@ const thing = "I am a thing";
 
 export const findType = () => {
   // Write your code here
+  const findType = thing;
+  if (typeof findType === "string"){
+    return ("This is a string");
+  } else if (typeof findType === "number"){
+    return ("This is a number");
+  } else if (typeof findType === "boolean"){
+    return ("This is a boolean");
+  } else {
+    return ("I don't know what this thing is");
+  }
 };
 
 /**
@@ -89,6 +110,13 @@ const nameTagOption = "Timothy";
 
 export const getIsValidOnNameTag = () => {
   // Write your code here
+  if (nameTagOption[0] === nameTagOption[0].toUpperCase && nameTagOption.length <= 8) {
+    const getIsValidOnNameTag = true;
+    return getIsValidOnNameTag;
+  } else {
+    const getIsValidOnNameTag = false;
+    return getIsValidOnNameTag;
+  }
 };
 
 /* Advanced Challenges */
