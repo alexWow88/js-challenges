@@ -82,8 +82,8 @@ export const checkIfNewHighScore = (score, highScore) => {
  */
 export const celsiusToFahrenheit = (tempInCelsius) => {
   /* Write your code here */
-  let tempInF = (tempInCelsius + 32) * (9/5);
-  return tempInCelsius + " degrees celsius is " + tempInF + " degrees fahrenheit";
+  let tempInF = (tempInCelsius * (9/5)) + 32;
+  return parseInt(tempInCelsius) + " degrees celsius is " + tempInF + " degrees fahrenheit";
 };
 
 /**
@@ -145,7 +145,7 @@ export const getGrade = (score) => {
  */
 export const calculateAreaOfCirlce = (radius) => {
   /* Write your code here */
-  const circleArea = 3.14 * radius **2;
+  const circleArea = 3.14159 * radius **2;
   return parseFloat(circleArea.toFixed (2));
 };
 
