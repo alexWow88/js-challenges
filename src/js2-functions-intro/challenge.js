@@ -118,7 +118,11 @@ export const calculateLifetimeSupply = (snickersPerDay, age, maxAge) => {
  */
 export const getGrade = (score) => {
   /* Write your code here */
-  if (score >= 80) {
+  if (typeof score != "number") {
+    return "Score unavailable";
+  } else if (score > 100) {
+    return "Score unavailable";
+  } else if (score >= 80) {
     return "A";
   } else if (score >= 70) {
     return "B";
@@ -130,7 +134,7 @@ export const getGrade = (score) => {
     return "E";
   } else if (score >= 0) {
     return "F";
-  } else if (score > 100 || score < 0 ){
+  } else if (score < 0 ){
     return "Score unavailable";
   } else if (typeof score != "number") {
     return "Score unavailable";
@@ -167,18 +171,24 @@ export const calculateAreaOfCirlce = (radius) => {
  * @param {string} name John
  */
 export const getStudentSummary = (score, name) => {
-  if (score >= 80){
-    return "Congratulations " + name + "! You achieved a grade of A."
+  if (typeof score != "number") {
+    return "My apologies " + name + ", there's been an error in processing your grade.";
+  } else if (score > 100) {
+    return "My apologies " + name + ", there's been an error in processing your grade.";
+  } else if (score >= 80){
+    return "Congratulations " + name + "! You achieved a grade of A.";
   } else if (score >= 70){
-    return "Well done " + name + "! You achieved a grade of B."
+    return "Well done " + name + "! You achieved a grade of B.";
   } else if (score >= 60){
-    return "Nicely done " + name + "! You achieved a grade of C."
+    return "Nicely done " + name + "! You achieved a grade of C.";
   } else if (score >= 50){
-    return "That's okay " + name + ". You achieved a grade of D."
+    return "That's okay " + name + ". You achieved a grade of D.";
   } else if (score >=40){
-    return "Too bad " + name + ". You achieved a grade of E."
+    return "Too bad " + name + ". You achieved a grade of E.";
   } else if (score >= 0){
-    return "Sorry " + name + ". You achieved a grade of F. There's always next year."
+    return "Sorry " + name + ". You achieved a grade of F. There's always next year.";
+  } else if (score < 0){
+    return "My apologies " + name + ", there's been an error in processing your grade.";
   }
   /* Write your code here */
 };
