@@ -22,8 +22,9 @@
  */
 
 export const createRecipeString = (ingredientsArr) => {
-  return;
-};
+    return ingredientsArr.join("+");
+  };
+
 
 /**
  * A function that takes Array of Items and returns a NEW ARRAY with the first and last item in it.
@@ -33,7 +34,14 @@ export const createRecipeString = (ingredientsArr) => {
  */
 
 export const getFirstAndLastItems = (itemsArr) => {
-  return;
+  
+  if (itemsArr) {
+    if (itemsArr.length > 1) {
+      return [itemsArr[0], itemsArr[itemsArr.length -1]];
+    } else {
+      return [itemsArr[0]];
+    }
+  }
 };
 
 /**
@@ -44,7 +52,11 @@ export const getFirstAndLastItems = (itemsArr) => {
  */
 
 export const totalScores = (scoreArr) => {
-  return;
+  let listArr = 0;
+  for (let index = 0; index < scoreArr.length; index++ ){
+    listArr = listArr + scoreArr[index];
+  }
+  return listArr;
 };
 
 /**

@@ -21,9 +21,12 @@
  * @return {boolean[]} [true, true, true]
  */
 
-export const removeFalseValues = (booleanArr) => {
-  return;
-};
+export const removeFalseValues = booleanArr => {
+  const trueValues = booleanArr.filter(boolean => {
+  return boolean === true;
+  });
+  return trueValues;
+}
 
 /**
  * A function that takes an array of numbers that are between 0 - 1.
@@ -34,7 +37,8 @@ export const removeFalseValues = (booleanArr) => {
  */
 
 export const createPercentageList = (numbersArr) => {
-  return;
+  const convPerc = numbersArr.map(decimal => `${100*decimal}%`);
+  return convPerc;
 };
 
 /**
@@ -47,7 +51,8 @@ export const createPercentageList = (numbersArr) => {
  */
 
 export const createListOfPoessessions = (possessionsArr, name) => {
-  return;
+  const listOfPossessions = possessionsArr.map(possession => `${name} ${possession}`);
+  return listOfPossessions;
 };
 
 /**
